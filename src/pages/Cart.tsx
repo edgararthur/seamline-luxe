@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Trash2, Plus, Minus } from 'lucide-react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Cart = () => {
   // Mock cart data (in a real app, this would come from a cart context/state management)
@@ -21,9 +22,14 @@ const Cart = () => {
   const shipping = 9.99;
   const total = subtotal + shipping;
 
+  const handleDelete = (id) => {
+    toast.error(`Deleted product ${id}`)
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
+      <ToastContainer />
+      <h1 className="text-2xl font-semibold mb-8 text-gray-800">Shopping Cart</h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {/* Cart Items */}
@@ -38,7 +44,7 @@ const Cart = () => {
               <div className="flex-1 ml-4">
                 <div className="flex justify-between">
                   <h3 className="font-semibold">{item.name}</h3>
-                  <button className="text-gray-400 hover:text-red-500">
+                  <button className="text-red-400" onClick={handleDelete}>
                     <Trash2 size={20} />
                   </button>
                 </div>
