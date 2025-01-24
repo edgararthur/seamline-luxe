@@ -1,10 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Trash2, Plus, Minus } from 'lucide-react';
 import { ToastContainer, toast } from 'react-toastify';
+import { useCartStore } from '../store/cartStore';
 
 const Cart = () => {
-  // Mock cart data (in a real app, this would come from a cart context/state management)
+  const navigate = useNavigate()
+  const { items, removeItem, updateQuantity, getTotal } = useCartStore()
   const cartItems = [
     {
       id: '1',
@@ -87,7 +89,7 @@ const Cart = () => {
                   <span>${total.toFixed(2)}</span>
                 </div>
               </div>
-              <button className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800">
+              <button className="w-full bg-black text-white py-3 rounded-lg hover:bg-gray-800" onClick={() => navigate('/checkout')}>
                 Proceed to Checkout
               </button>
               <Link

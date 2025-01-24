@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/Hero';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star } from 'lucide-react';
+import Footer from '../layout/Footer';
 
 const Home = () => {
   const featuredProducts = [
@@ -106,6 +107,7 @@ const Home = () => {
           </form>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

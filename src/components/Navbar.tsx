@@ -7,10 +7,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
     { name: 'Shop', path: '/shop' },
     { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
-    { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -35,14 +35,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4">
-              <Link to="/account" className="text-gray-600 hover:text-gray-900">
-                <User size={20} />
-              </Link>
-              <Link to="/cart" className="text-gray-600 hover:text-gray-900">
-                <ShoppingBag size={20} />
-              </Link>
-            </div>
+              <div className="flex items-center space-x-4">
+                <Link to="/account" className="text-gray-600 hover:text-gray-900">
+                  <User size={20} />
+                </Link>
+                <Link to="/cart" className="text-gray-600 hover:text-gray-900">
+                  <ShoppingBag size={20} />
+                </Link>
+              </div>
           </div>
 
           {/* Mobile menu button */}
@@ -71,6 +71,14 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <div className="flex items-center space-x-4">
+              <Link to="/account" className="text-gray-600 hover:text-gray-900">
+                <User size={20} />
+              </Link>
+              <Link to="/cart" className="text-gray-600 hover:text-gray-900">
+                <ShoppingBag size={20} />
+              </Link>
+            </div>
           </div>
         </div>
       )}
