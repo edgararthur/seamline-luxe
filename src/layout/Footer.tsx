@@ -64,6 +64,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} Seamline Luxe. All rights reserved.</p>
+          <p>Accra, Ghana</p>
         </div>
       </div>
     </footer>
