@@ -64,20 +64,10 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  name: 'Sarah Chen',
+                  name: 'Naana',
                   role: 'Founder & Creative Director',
-                  image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80',
-                },
-                {
-                  name: 'Michael Ross',
-                  role: 'Head of Design',
-                  image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80',
-                },
-                {
-                  name: 'Emma Thompson',
-                  role: 'Production Manager',
-                  image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80',
-                },
+                  image: '',
+                }
               ].map((member, index) => (
                 <div key={index} className="text-center">
                   <div className="w-48 h-48 mx-auto mb-4">
